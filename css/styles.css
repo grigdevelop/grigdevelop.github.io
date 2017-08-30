@@ -1,0 +1,17 @@
+.ruby-theme{
+    
+}
+
+.ruby-header{    
+    background-color: #c7211b;
+    margin-bottom: 20px;
+}
+
+.ruby-header a{
+    color: white;
+    line-height: 40px;
+}
+
+.ruby-header a:hover{
+    text-decoration: none;
+}
