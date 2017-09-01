@@ -1,0 +1,26 @@
+<div class="ruby-theme">
+    <div class="ruby-header">
+        <a href="/#!"> &nbsp; &nbsp;&nbsp;&nbsp;< back to Grigor Aleksanyan profile</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6" ng-repeat="(groupName, groupSkills) in skills">
+                <h3>{{groupName}}</h3>                    
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="skill in groupSkills">                    
+                        <a target="_self" data-toggle="collapse" href="#skill_{{skill.id}}" aria-expanded="false" aria-controls="skill_{{skill.id}}">
+                            {{skill.title}}
+                        </a>                       
+                        <div class="collapse" id="skill_{{skill.id}}">
+                            <div class="card card-body">
+                                {{skill.description}}
+                            </div>
+                        </div>
+                    </li>                       
+                </ul>            
+            </div>               
+        </div>
+    </div>
+</div>
+
+
