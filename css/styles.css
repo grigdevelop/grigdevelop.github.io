@@ -15,3 +15,11 @@
 .ruby-header a:hover{
     text-decoration: none;
 }
+
+.profiles{
+
+}
+
+.profiles .profile-item{
+    margin-bottom: 20px;
+}

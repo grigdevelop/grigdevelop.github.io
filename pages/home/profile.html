@@ -13,7 +13,7 @@
                         </a>                       
                         <div class="collapse" id="skill_{{skill.id}}">
                             <div class="card card-body">
-                                {{skill.description}}
+                                <p ng-bind-html="skill.description | trust"></p>                                
                             </div>
                         </div>
                     </li>                       

@@ -17,6 +17,12 @@ app.config(function($routeProvider, $locationProvider){
     //$locationProvider.html5Mode(true);
 });
 
+app.filter("trust", ['$sce', function($sce) {
+    return function(htmlCode){
+      return $sce.trustAsHtml(htmlCode);
+    }
+  }]);
+
 app.controller('HomeController', ['$scope','profileService', '$routeParams',
 function($scope, profileService, $routeParams){
     profileService.getProfiles()
@@ -47,7 +53,7 @@ app.factory('profileService', ['$http','$q', function($http, $q){
         
         $http({
             method: 'GET',
-            url: 'http://localhost:3000/profiles/get_profiles'
+            url: 'https://my-cv-backend.herokuapp.com/profiles/get_profiles'
         }).then(function(response){
             deferred.resolve(response.data);
         }, function errorCallback(response){
@@ -62,7 +68,7 @@ app.factory('profileService', ['$http','$q', function($http, $q){
         
         $http({
             method: 'GET',
-            url: 'http://localhost:3000/profiles/' + profileId + '/profile_skills/get_profile_skills'
+            url: 'https://my-cv-backend.herokuapp.com/profiles/' + profileId + '/profile_skills/get_profile_skills'
         }).then(function(response){
             deferred.resolve(response.data);
         }, function errorCallback(response){

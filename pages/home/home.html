@@ -18,44 +18,11 @@
 </div>
 <br>
 <br>
-<div class="container">
-    <div class="row">        
-        <div class="col">
-            <div class="card" style="width: 20rem; height: 30rem">
-                <img class="card-img-top" src="img/pic_angular.jpg" alt="AngularJS">
-                <div class="card-body">
-                    <h4 class="card-title">JavaScript/AngularJS</h4>
-                    <p class="card-text">Working as JavaScript/Angular Developer</p>
-                    <a href="#" class="btn btn-primary" style="width: 100%">More Info</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="img/net.svg" alt=".NET Developer">
-                <div class="card-body">
-                    <h4 class="card-title">.NET Developer/C#</h4>
-                    <p class="card-text">Working as .NET Developer</p>
-                    <a href="#" class="btn btn-primary" style="width: 100%">More Info</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="img/icon.ruby.png" alt="Ruby">
-                <div class="card-body">
-                    <h4 class="card-title">Ruby Developer</h4>
-                    <p class="card-text">Working as RoR Developer</p>
-                    <a href="#!/ruby" class="btn btn-primary" style="width: 100%">More Info</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="container">
     <div class="row">
-        <div class="col" ng-repeat="profile in profiles">
-            <div class="card" style="width: 20rem; height: 30rem">
+        <div class="col profiles" ng-repeat="profile in profiles">
+            <div class="card profile-item" style="width: 20rem; height: 30rem">
                 <img class="card-img-top" ng-src="img/{{profile.image_url}}" alt="{{profile.title}}">
                 <div class="card-body">
                     <h4 class="card-title">{{profile.title}}</h4>
