@@ -1,18 +1,289 @@
-<html>
-    <head>
-        <script src="js/angular.min.js"></script>
-        <script src="js/angular-route.min.js"></script>
-        <script src="js/main.js"></script>        
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grigor Aleksanyan - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-base-200 min-h-screen">
+<!-- Navbar for small screens -->
+<div class="navbar bg-base-100 lg:hidden sticky top-0 z-50 shadow-lg">
+    <div class="flex-1">
+        <h1 class="text-xl font-bold text-primary">Grigor Aleksanyan</h1>
+    </div>
+    <div class="flex-none gap-2">
+        <a href="mailto:grigdevelop@gmail.com" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+        </a>
+        <a href="tel:+374xxxxxxxx" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/grigor-aleksanyan" class="btn btn-ghost btn-circle" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+    </div>
+</div>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
+    <div class="container mx-auto px-4 py-4 lg:py-8 max-w-5xl">
+       <!-- Header Section - Hidden on small screens -->
+       <div class="hidden lg:block card bg-base-100 shadow-xl mb-8">
+        <div class="card-body p-6">
+            <div class="flex gap-6">
+                <div class="avatar">
+                    <div class="w-40 h-40 rounded-xl ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D03AQFwegGY-lR81Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1595922377287?e=1736380800&v=beta&t=RP_-VCD5U8H4tX5by2frHQX4vZn7IJFEA8kN1ayXYD4" alt="Grigor Aleksanyan" />
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h1 class="text-4xl font-bold text-primary mb-2">Grigor Aleksanyan</h1>
+                            <div class="space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                    </svg>
+                                    <a href="mailto:grigdevelop@gmail.com" class="link link-hover">grigdevelop@gmail.com</a>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                    </svg>
+                                    <a href="tel:+374xxxxxxxx" class="link link-hover">+374 55 52 37 48</a>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Yerevan, Armenia</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/in/grigor-aleksanyan" 
+                           class="btn btn-primary"
+                           target="_blank">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Mobile Profile Card - Only visible on small screens -->
+    <div class="card bg-base-100 shadow-xl mb-6 lg:hidden">
+        <div class="card-body p-4">
+            <div class="flex gap-4">
+                <div class="avatar">
+                    <div class="w-24 h-24 rounded-xl ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src="/api/placeholder/96/96" alt="Grigor Aleksanyan" />
+                    </div>
+                </div>
+                <div class="flex-1 space-y-1">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        <a href="mailto:grigdevelop@gmail.com" class="link link-hover text-sm">grigdevelop@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        <a href="tel:+374xxxxxxxx" class="link link-hover text-sm">+374 xx xx xx xx</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-sm">Yerevan, Armenia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Main Content Grid -->
+        <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Left Column -->
+            <div class="lg:col-span-1">
+                <!-- Technical Skills Section -->
+                <div class="card bg-base-100 shadow-xl mb-6 sticky top-20">
+                    <div class="card-body">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Technical Skills</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">Languages</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge badge-primary badge-lg">C#</span>
+                                    <span class="badge badge-primary badge-lg">JavaScript</span>
+                                    <span class="badge badge-primary badge-lg">TypeScript</span>
+                                    <span class="badge badge-primary badge-lg">Python</span>
+                                </div>
+                            </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    </head>
-    <body ng-app="cvApp">
-        <div ng-view></div>
-    </body>
+                            <div>
+                                <h3 class="font-semibold mb-2">Frameworks</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge badge-secondary badge-lg">ASP.NET</span>
+                                    <span class="badge badge-secondary badge-lg">React</span>
+                                    <span class="badge badge-secondary badge-lg">Angular</span>
+                                    <span class="badge badge-secondary badge-lg">AngularJS</span>
+                                    <span class="badge badge-secondary badge-lg">WPF</span>
+                                    <span class="badge badge-secondary badge-lg">Unity3D</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold mb-2">Databases</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge badge-accent badge-lg">MS SQL</span>
+                                    <span class="badge badge-accent badge-lg">MongoDB</span>
+                                    <span class="badge badge-accent badge-lg">PostgreSQL</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold mb-2">Tools & Methods</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge badge-info badge-lg">Jira</span>
+                                    <span class="badge badge-info badge-lg">TeamCity</span>
+                                    <span class="badge badge-info badge-lg">Octopus</span>
+                                    <span class="badge badge-info badge-lg">Git</span>
+                                    <span class="badge badge-info badge-lg">Agile</span>
+                                    <span class="badge badge-info badge-lg">Scrum</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-2">
+                <!-- Professional Experience Section -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="text-2xl font-bold text-primary mb-6">Professional Experience</h2>
+                        
+                        <div class="space-y-8">
+                            <!-- Current Position -->
+                            <div class="relative pl-4 border-l-4 border-primary">
+                                <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold">gg</h3>
+                                    <div class="text-sm opacity-70">Aug 2021 - Aug 2024 | Yerevan, Armenia</div>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-base-content">
+                                    <li class="text-sm sm:text-base">Led legacy code modernization efforts by migrating to TypeScript and implementing integration tests</li>
+                                    <li class="text-sm sm:text-base">Created automation scripts for local environment setup and database synchronization</li>
+                                    <li class="text-sm sm:text-base">Designed and built a web-based client management system for an on-demand transportation platform</li>
+                                </ul>
+                            </div>
+
+                            <div class="relative pl-4 border-l-4 border-secondary">
+                                <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold">MyQ</h3>
+                                    <div class="text-sm opacity-70">Oct 2020 - Feb 2021 | Prague, Czech Republic</div>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-base-content">
+                                    <li class="text-sm sm:text-base">Spearheaded the development of advanced printer software</li>
+                                    <li class="text-sm sm:text-base">Engineered robust back-end systems using C#</li>
+                                    <li class="text-sm sm:text-base">Designed and implemented an intuitive embedded interface</li>
+                                </ul>
+                            </div>
+
+                            <div class="relative pl-4 border-l-4 border-accent">
+                                <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold">Massive Interactive</h3>
+                                    <div class="text-sm opacity-70">Aug 2019 - Oct 2020 | Prague, Czech Republic</div>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-base-content">
+                                    <li class="text-sm sm:text-base">Enhanced the Content Management section of a large-scale media services project</li>
+                                    <li class="text-sm sm:text-base">Utilized ASP.NET within an Orchestration Architecture</li>
+                                    <li class="text-sm sm:text-base">Implemented CI/CD pipelines using TeamCity and Octopus</li>
+                                </ul>
+                            </div>
+
+                            <!-- Expandable Previous Experience -->
+                            <div class="collapse collapse-plus bg-base-200 rounded-lg">
+                                <input type="checkbox" /> 
+                                <div class="collapse-title text-xl font-medium">
+                                    Previous Experience
+                                </div>
+                                <div class="collapse-content">
+                                    <div class="space-y-8 pt-4">
+                                        <div class="relative pl-4 border-l-4 border-info">
+                                            <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                                <h3 class="text-xl font-bold">EPAM Systems</h3>
+                                                <div class="text-sm opacity-70">Jun 2017 - Mar 2019 | Prague, Czech Republic</div>
+                                            </div>
+                                            <ul class="list-disc list-inside space-y-2 text-base-content">
+                                                <li class="text-sm sm:text-base">Contributed to a critical Banking Risk Management project using C#</li>
+                                                <li class="text-sm sm:text-base">Designed and implemented a deployment automation tool using Python</li>
+                                                <li class="text-sm sm:text-base">Utilized TeamCity for continuous integration and delivery</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="relative pl-4 border-l-4 border-info">
+                                            <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                                <h3 class="text-xl font-bold">Bet Construct Kyiv</h3>
+                                                <div class="text-sm opacity-70">Feb 2016 - Mar 2017 | Kyiv, Ukraine</div>
+                                            </div>
+                                            <ul class="list-disc list-inside space-y-2 text-base-content">
+                                                <li class="text-sm sm:text-base">Developed a high-performance Cashier Client Web application using AngularJS</li>
+                                                <li class="text-sm sm:text-base">Engineered back-end infrastructure using ASP.NET Web API</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="relative pl-4 border-l-4 border-info">
+                                            <div class="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                                <h3 class="text-xl font-bold">Earlier Positions</h3>
+                                                <div class="text-sm opacity-70">2012 - 2016</div>
+                                            </div>
+                                            <ul class="list-disc list-inside space-y-2 text-base-content">
+                                                <li class="text-sm sm:text-base">Fluger (2015-2016): Developed gambling games using WPF and Unity3D</li>
+                                                <li class="text-sm sm:text-base">BetConstruct (2014-2015): Led development of Cashier Client WPF application</li>
+                                                <li class="text-sm sm:text-base">gg (2012-2014): Built Real Estate and Book Store applications using ASP.NET MVC</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button - Shows on scroll -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="btn btn-circle btn-primary fixed bottom-4 right-4 lg:hidden opacity-0 transition-opacity duration-300"
+            id="backToTop">
+        ↑
+    </button>
+
+    <script>
+        // Show/hide back to top button based on scroll position
+        window.onscroll = function() {
+            const btn = document.getElementById('backToTop');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.opacity = '1';
+            } else {
+                btn.style.opacity = '0';
+            }
+        };
+    </script>
+</body>
 </html>
